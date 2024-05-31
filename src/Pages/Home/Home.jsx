@@ -6,8 +6,9 @@ const Home = () => {
     <div className='Home'>
         <h1>R NEWS</h1>
         <p>Test News API</p>
+        <input type="text" placeholder='Insert Search'/>
         <div className="container">
-          <NewsApi />
+          <NewsApi search={"NBA"}/>
         </div>
     </div>
   )
