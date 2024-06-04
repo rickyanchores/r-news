@@ -36,16 +36,16 @@ const NewsApi = () => {
     <div className='News'>
       <h1>News API</h1>
       <button
-        className="bg-purple-800 text-white font-bold p-4 mb-2 mt-2"
+        className="bg-black text-white font-bold p-4 mb-2 mt-2 hover:text-orange-600"
         onClick={() => fetchData(prompt("Search for..."))}
       >
         SEARCH
       </button>
       <ul className='news-list grid grid-cols-1 md:grid-cols-3 gap-4'>
         {articles.map((article, index) => (
-          <li key={index} className='article bg-zinc-800 p-2 rounded-lg'>
+          <li key={index} className='article bg-black p-4 rounded-lg'>
             {article.urlToImage && (
-              <img className='image rounded-lg' src={article.urlToImage} alt="News" />
+              <img className='image rounded-lg mb-2' src={article.urlToImage} alt="News" />
             )}
             <a
               className='title text-2xl font-bold text-white'
