@@ -34,7 +34,9 @@ const NewsApi = () => {
 
   return (
     <div className='News'>
-      <h1>News API</h1>
+      <h1 className="title text-2xl">News API</h1>
+      <p>by Ricky A</p>
+      <input className='inputField p-4 mr-2 text-xl text-gray-300' type="text" placeholder='Search. . .'/>
       <button
         className="bg-black text-white font-bold p-4 mb-2 mt-2 hover:text-orange-600"
         onClick={() => fetchData(prompt("Search for..."))}
@@ -43,7 +45,7 @@ const NewsApi = () => {
       </button>
       <ul className='news-list grid grid-cols-1 md:grid-cols-3 gap-4'>
         {articles.map((article, index) => (
-          <li key={index} className='article bg-black p-4 rounded-lg'>
+          <li key={index} className='article bg-zinc-600 p-4 rounded-lg'>
             {article.urlToImage && (
               <img className='image rounded-lg mb-2' src={article.urlToImage} alt="News" />
             )}

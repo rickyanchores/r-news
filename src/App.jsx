@@ -8,7 +8,7 @@ import NewsApi from './API/NewsApi/NewsApi'
 const App = () => {
   return (
     <div className='App min-h-screen flex justify-center items-center'>
-      <div className="container p-5">
+      <div className="container flex justify-center items-center p-5">
         <NewsApi />
       </div>
     </div>
