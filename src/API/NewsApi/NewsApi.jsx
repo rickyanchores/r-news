@@ -32,17 +32,17 @@ const NewsApi = () => {
 
   return (
     <div className='News'>
-      <h1 className="title text-2xl">News API</h1>
+      <h1 className="title text-4xl">News API</h1>
       <p>by Ricky A</p>
       <input
-        className='inputField p-4 mr-2 text-xl text-gray-300'
+        className='inputField p-4 mr-2 text-xl text-gray-300 rounded-md'
         type="text"
         placeholder='Search...'
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
       <button
-        className="bg-black text-white font-bold p-4 mb-2 mt-2 hover:text-orange-600"
+        className="bg-black text-white font-bold p-4 mb-2 mt-2 hover:text-orange-600 rounded-md"
         onClick={handleSearch}
       >
         SEARCH
@@ -51,7 +51,7 @@ const NewsApi = () => {
       {error && <p>{error}</p>}
       <ul className='news-list grid grid-cols-1 md:grid-cols-3 gap-4'>
         {articles.map((article, index) => (
-          <li key={index} className='article bg-zinc-400 p-4 rounded-lg'>
+          <li key={index} className='article bg-zinc-400 p-4 rounded-lg hover:bg-black'>
             {article.urlToImage && (
               <img className='image rounded-lg mb-2' src={article.urlToImage} alt="News" />
             )}
