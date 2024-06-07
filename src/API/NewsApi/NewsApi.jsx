@@ -9,7 +9,9 @@ const NewsApi = () => {
 
   const fetchData = async (query) => {
     const myApiKey = '097e9acec10d424c94334295d2747fd8';
+    //const urlbySource = `https://newsapi.org/v2/top-headlines?sources=cnn-news&apiKey=${myApiKey}`
     const url = `https://newsapi.org/v2/everything?q=${query}&apiKey=${myApiKey}`;
+
 
     setLoading(true);
     setError(null);
@@ -51,7 +53,7 @@ const NewsApi = () => {
       {error && <p>{error}</p>}
       <ul className='news-list grid grid-cols-1 md:grid-cols-3 gap-4'>
         {articles.map((article, index) => (
-          <li key={index} className='article bg-zinc-400 p-4 rounded-lg hover:bg-black'>
+          <li key={index} className='article bg-slate-500 p-4 rounded-lg hover:bg-black'>
             {article.urlToImage && (
               <img className='image rounded-lg mb-2' src={article.urlToImage} alt="News" />
             )}

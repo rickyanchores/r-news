@@ -9,10 +9,9 @@ import Banner from './Components/Banner/Banner'
 const App = () => {
   return (
     <div className='App min-h-screen flex flex-wrap justify-center items-center'>
-      <div className="container flex justify-center items-center p-5">
+      <div className="container bg-slate-300 rounded-md flex justify-center items-center p-5">
         <NewsApi />
       </div>
-      <Banner />
     </div>
   )
 }
