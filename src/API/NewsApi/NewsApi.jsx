@@ -34,7 +34,7 @@ const NewsApi = () => {
 
   return (
     <div className='News'>
-      <h1 className="title text-4xl">News API</h1>
+      <h1 className="title text-4xl font-semibold">News API</h1>
       <p>by Ricky A</p>
       <input
         className='inputField p-4 mr-2 text-xl text-gray-300 rounded-md'
@@ -53,7 +53,7 @@ const NewsApi = () => {
       {error && <p>{error}</p>}
       <ul className='news-list grid grid-cols-1 md:grid-cols-3 gap-4'>
         {articles.map((article, index) => (
-          <li key={index} className='article bg-slate-500 p-4 rounded-lg hover:bg-black'>
+          <li key={index} className='article bg-gray-600 p-4 rounded-lg hover:bg-black'>
             {article.urlToImage && (
               <img className='image rounded-lg mb-2' src={article.urlToImage} alt="News" />
             )}
