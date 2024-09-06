@@ -53,7 +53,7 @@ const NewsApi = () => {
       {error && <p>{error}</p>}
       <ul className='news-list grid grid-cols-1 md:grid-cols-3 gap-4'>
         {articles.map((article, index) => (
-          <li key={index} className='article shadow-md bg-black p-4 rounded-lg hover:bg-slate-600'>
+          <li key={index} className='article shadow-md bg-black p-4 rounded-lg hover:bg-slate-400'>
             {article.urlToImage && (
               <img className='image rounded-lg mb-2' src={article.urlToImage} alt="News" />
             )}
