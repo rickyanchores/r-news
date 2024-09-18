@@ -54,12 +54,12 @@ const NewsApi = () => {
       {error && <p>{error}</p>}
       <ul className='news-list grid grid-cols-1 md:grid-cols-3 gap-4'>
         {articles.map((article, index) => (
-          <li key={index} className='article shadow-md bg-black p-4 rounded-lg hover:bg-slate-600'>
+          <li key={index} className='article shadow-md  bg-zinc-200 p-4 rounded-lg hover:bg-black'>
             {article.urlToImage && (
               <img className='image rounded-lg mb-2' src={article.urlToImage} alt="News" />
             )}
             <a
-              className='title text-2xl font-bold text-white hover:text-orange-500'
+              className='title text-2xl font-bold text-black hover:text-orange-500'
               href={article.url}
               target='_blank'
               rel='noopener noreferrer'
